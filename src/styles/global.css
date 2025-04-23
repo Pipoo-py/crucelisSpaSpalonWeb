@@ -1,0 +1,75 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+:root{
+  --main-color: #cc8f96;
+  --second-color: #f2f1ef;
+  --acent: #a67564;
+  --text-color: #3f0d0c;
+}
+
+body{
+  background-color: var(--second-color);
+}
+
+@font-face{
+  font-family: "greatVibes";
+	src: url('/fonts/Great_Vibes/GreatVibes-Regular.ttf');
+	font-style: normal;
+	font-display: swap; 
+}
+
+@font-face{
+  font-family: "Lato";
+	src: url('/fonts/Lato/Lato-Regular.ttf');
+	font-style: normal;
+	font-display: swap; 
+}
+
+h1{
+  font-family: "greatVibes";
+  font-size: clamp(4rem, 5dvw, 7rem);
+  color: var(--second-color);
+  animation: viewTitle .7s;
+  text-align: center;
+}
+
+h2{
+  font-family: "greatVibes";
+  color: var(--text-color);
+  font-size: clamp(2rem, 50dvw, 5rem);
+}
+
+@keyframes viewTitle{
+  from{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes viewElement{
+  from{
+    opacity: 0;
+    scale: .7;
+    transform: translateY(40px);
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+  }
+}

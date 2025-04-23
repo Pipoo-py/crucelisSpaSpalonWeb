@@ -1,0 +1,134 @@
+---
+import LocationPinIcon from '@mui/icons-material/LocationPin';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import InstagramIcon from '@mui/icons-material/Instagram';
+---
+
+<footer class="site-footer" id="footer">
+  <div class="container">
+    <div class="footer-widgets">
+      <div class="widget widget-location">
+        <h3>Ubicación</h3>
+        <div class="map-responsive">
+          <iframe
+            src="https://maps.google.com/?cid=11521275855480936322"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+      <div class="widget widget-contact">
+        <h3>Contacto</h3>
+        <p>
+          <LocationPinIcon /> Dirección: Centro Comercial Galaxy Plaza, Lima, Perú.
+        </p>
+        <p>
+          <LocalPhoneIcon /> Teléfono: +51979289185
+        </p>
+      </div>
+      <div class="widget widget-social">
+        <h3>Síguenos</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/crucelispasalon/" target="_blank" rel="noopener noreferrer"><InstagramIcon /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} Crucelis Spa & Salón. Todos los derechos reservados.</p>
+      <p>Diseñado y desarrollado por Lizardiz Nexus</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 4rem 0;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .widget h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .widget-location .map-responsive {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+  .widget-location .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .widget-contact p {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .widget-social .social-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .widget-social a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .widget-social a:hover {
+    color: var(--primary-color);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-bottom p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .social-icons a{
+    color: var(--text-color);
+  }
+
+  @media screen and (max-width: 600px) {
+    .footer-widgets {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .widget-social .social-icons {
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+  import { Image } from "astro:assets"
+---
+
+<main class="main">
+  <div class="main__container">
+    <div class="main__info">
+      <h1>Crucelis Spa & Salón</h1>
+      <p>
+        En Crucelis Spa Salón, tu destino predilecto en Lima para realzar tu belleza de pies a manos. Sumérgete en un ambiente donde la atención meticulosa y el cuidado personal se fusionan para revitalizar tu imagen y elevar tu confianza. Permítete el placer de sentirte renovado y proyectar una belleza radiante. ¿Listo para experimentar el bienestar que mereces?
+      </p>
+    </div>
+  </div>
+</main>
+
+<style>
+  .main__info{
+    position: relative;
+    z-index: 10;
+    padding: 0 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .main__info p{
+    max-width: 800px;
+    color: var(--second-color);
+    text-align: center;
+    animation: viewDescription .5s;
+    font-size: clamp(.9rem, 5dvw, 1.15rem);
+  }
+
+  .main__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+  }
+
+  @keyframes viewDescription{
+  from{
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>

@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /panel-de-control/
+Disallow: /backend/
+Disallow: /admin/
+Disallow: /temporal/
+Disallow: /*.css$
+Disallow: /*.js$
+
+Sitemap: https://crucelisspasalon.netlify.app/sitemap-index.xml

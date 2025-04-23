@@ -1,0 +1,15 @@
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Content-Security-Policy = "default-src 'self'; script-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; frame-src 'self' https://www.google.com; object-src 'none'"
+      X-Frame-Options = "DENY"
+      X-Content-Type-Options = "nosniff"
+      Referrer-Policy = "strict-origin-when-cross-origin"
+      Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+      Link = "</sitemap.xml>; rel=\"sitemap\""
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
