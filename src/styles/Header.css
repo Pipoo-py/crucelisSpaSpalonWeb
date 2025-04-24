@@ -1,0 +1,131 @@
+.header {
+  position: fixed;
+  z-index: 30;
+  width: 100%;
+  background-color: var(--second-color);
+  border-bottom: 1px solid var(--acent);
+  box-shadow: 0 0 24px #0002;
+  container-name: header;
+  container-type: inline-size;
+  top: 0;
+}
+.nav__ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.8rem;
+  list-style: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav__ul--open {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--second-color);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(0);
+}
+
+.nav__ul li {
+  border-radius: 34px;
+  padding: 18px;
+}
+
+.nav__ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.16rem;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__ul li a::before {
+  content: "";
+  transform: translateY(14px);
+  position: absolute;
+  height: 2px;
+  width: 45%;
+  opacity: 0;
+  margin: 0 auto;
+  bottom: -6px;
+  background-color: var(--acent);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.nav__ul li:hover > a::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav__mobile-toggle {
+  position: relative;
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--text-color);
+  z-index: 40;
+}
+
+@keyframes viewNav {
+  from {
+    background-color: transparent;
+    border: none;
+  }
+  to {
+    background-color: var(--second-color);
+    border-bottom: 1px solid var(--acent);
+  }
+}
+
+@keyframes viewA {
+  from {
+    color: var(--second-color);
+  }
+  to {
+    color: var(--text-color);
+  }
+}
+
+@container header (max-width: 600px) {
+  .nav__container {
+    padding: 0 1rem;
+  }
+
+  .nav__ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--second-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    transform: translateX(-100%);
+    z-index: 20;
+  }
+
+  .nav__ul--open {
+    transform: translateX(0);
+  }
+
+  .nav__ul li {
+    padding: 1rem 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .nav__ul li a {
+    font-size: 1rem;
+  }
+
+  .nav__mobile-toggle {
+    display: inline;
+  }
+}

@@ -1,5 +1,7 @@
 ---
 	import "../styles/global.css"
+	import { Header } from "../components/Header.jsx"
+	import Footer from "../components/Footer.astro"
 	const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -15,15 +17,17 @@
 		<link rel="preload" href="/fonts/Great_Vibes/GreatVibes-Regular.ttf" as="font" type="font/ttf" crossorigin />
 		<link rel="preload" href="/fonts/Lato/Lato-Regular.ttf" as="font" type="font/ttf" crossorigin />
 		<link rel="canonical" href={canonicalURL} />
-		<meta name="title" content="Crucelis Spa Salón" />
-		<meta name="description" content="Salón de Spa de Crucelis Lizardiz, ubicado en Lima, Perú. Ofrece múltiples servicios de manicure, pedicure, etc..." />
+		<meta name="title" content="Crucelis Spa & Salón" />
+		<meta name="description" content="Salón de Spa de Crucelis Lizardiz, ubicado en Lima, Distrito El Chorrillo, Perú. Ofrece múltiples servicios de manicure, pedicure, etc..." />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={Astro.url} />
-		<meta property="og:title" content="Crucelis Spa" />
-		<meta property="og:description" content="Salón de Spa de Crucelis Lizardiz, ubicado en Lima, Perú. Ofrece múltiples servicios de manicure, pedicure, etc..." />
-		<title>Crucelis Spa</title>
+		<meta property="og:title" content="Crucelis Spa & Salón" />
+		<meta property="og:description" content="Salón de Spa de Crucelis Lizardiz, ubicado en Lima, Distrito El Chorrillo, Perú. Ofrece múltiples servicios de manicure, pedicure, etc..." />
+		<title>Crucelis Spa & Salón</title>
 	</head>
 	<body>
-		<slot />
+		<Header client:load/>
+			<slot />
+		<Footer />
 	</body>
 </html>
