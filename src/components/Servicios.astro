@@ -22,9 +22,19 @@
         <Image src={ import("../assets/services/3.webp")} alt="Imagen que muestra uno de los servicios del sitio"/>
     </div>
   </div>
+
+  <a href="/gallery" class="gallery-button">¿Quieres ver más? ¡Visita la galería!</a>
 </section>
 
 <style>
+
+  .services-section{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
 
   .services__container{
     display: flex;
@@ -79,6 +89,15 @@
 
   .special{
     color: var(--acent);
+  }
+
+  .gallery-button{
+    text-decoration: none;
+    background-color: var(--acent);
+    color: var(--second-color);
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 8px;
   }
 
   @media screen and (max-width: 600px){
